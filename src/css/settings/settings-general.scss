@@ -1,0 +1,35 @@
+#settings{
+    div{
+        border:solid 2px #000;
+        margin:2%;
+        h2{
+            text-align:center;
+            text-decoration:underline;
+        }
+        ul{
+            margin: 0;
+            padding: 2% 13%;
+            li{
+                list-style:none;
+                display:flex;
+                justify-content: space-between;
+                padding: 2% 0;
+                font-size: 20px;
+                .fa-check{
+                    color:#0ac42f;
+                    &:hover{
+                        color:#f00;
+                    }
+                }
+                .fa-times{
+                    color:#f00;
+                    padding-right:1%;
+                    font-size: 22px;
+                    &:hover{
+                        color:#0ac42f;
+                    }
+                }
+            }
+        } 
+    }
+}
