@@ -1,0 +1,23 @@
+#wrapper .travel{
+    border-top:solid 2px var(--font-color);
+}
+#wrapper .sports{
+    border-bottom:solid 2px var(--font-color);
+}
+.category{
+    border-top:solid 1px var(--font-color);
+    border-right: solid 2px var(--font-color);
+    border-bottom:solid 1px var(--font-color);
+    border-left:solid 2px var(--font-color);
+    .category-h2-arrow{
+        display:flex;
+        justify-content: space-between;
+        padding: 5% 3%;
+        h2{
+            margin:0;
+        }
+        .fa-arrow-circle-down{
+            font-size: 30px;
+        }
+    }
+}

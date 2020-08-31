@@ -1,0 +1,28 @@
+html{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    max-width:320px;
+    margin:0 auto;
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 3px;
+    line-height: 26px;
+}
+#wrapper{
+    display:flex;
+    justify-content:space-around;
+    flex-direction:column;
+    background-color:var(--bg-color);
+    color:var(--font-color);
+    h1{
+        font-size:28px;
+        text-transform: capitalize;
+        text-align:center;
+        text-decoration:underline;
+    }
+    p{
+        font-family: 'Anton', sans-serif;
+    }
+
+}

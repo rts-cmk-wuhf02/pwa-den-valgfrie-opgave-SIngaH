@@ -1,0 +1,17 @@
+#nav{
+    ul{
+        display:flex;
+        justify-content: space-around;
+        padding:0;
+        li{
+            list-style:none;
+            a{
+                font-size:30px;
+                color:var(--font-color);
+                &:hover{
+                    color:#fff;
+                }
+            }
+        }
+    }
+}
