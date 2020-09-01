@@ -9,28 +9,27 @@
             <div class="show-news">
                 <h2>News Stories</h2>
                 <ul>
-                    <li>Travel <i class="fas fa-check"></i></li>
-                    <li>Europe <i class="fas fa-check"></i></li>
-                    <li>Heath <i class="fas fa-check"></i></li>
-                    <li>Business <i class="fas fa-check"></i></li>
-                    <li>Sports <i class="fas fa-check"></i></li>
-
+                    <li class="category-check" id="category-arts">Arts <i class="fas fa-check"></i></li>
+                    <li class="category-check" id="category-home">Home <i class="fas fa-check"></i></li>
+                    <li class="category-check" id="category-science">Science <i class="fas fa-check"></i></li>
+                    <li class="category-check" id="category-us">Us <i class="fas fa-check"></i></li>
+                    <li class="category-check" id="category-world">World <i class="fas fa-check"></i></li>
                 </ul>
             </div>
             <div class="choose-color">
                 <h2>Theme Color</h2>
                 <ul>
-                    <li>Blue <input type="checkbox" name="blue" id="blue-bg" class="color-check" checked="true"></li>
-                    <li>Grey <input type="checkbox" name="grey" id="grey-bg" class="color-check"></li>
-                    <li>Green <input type="checkbox" name="green" id="green-bg" class="color-check"></li>
-                    <li>Purple <input type="checkbox" name="purple" id="purple-bg" class="color-check"></li>
+                    <li id="blue-bg" class="color-check">Blue  <i class="fas fa-check blue-check"></i></li>
+                    <li id="grey-bg" class="color-check">Grey <i class="fas fa-times grey-check"></i></li>
+                    <li id="green-bg" class="color-check">Green <i class="fas fa-times green-check"></i></li>
+                    <li id="purple-bg" class="color-check">Purple <i class="fas fa-times purple-check"></i></li>
                 </ul>
-            </div>
-            <h2></h2>
-        
+            </div>        
         </section>
+
+        <button class="install-offline">Install this site</button>
+
         <%- include("../partials/footer") %>
-        <script src="assets/js/checked.js"></script>
 
 <%- include("../partials/last") %>
 
