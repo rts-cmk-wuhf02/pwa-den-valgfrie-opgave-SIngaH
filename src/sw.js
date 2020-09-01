@@ -6,8 +6,11 @@ const filesToCache = [
     `./assets/css/index/index.css`,
     `./assets/images/news-icon192.png`,
     `./assets/images/news-icon512.png`,
+    `./assets/js/colorChange.js`,
     `./settings.html`,
-    `./assets/css/settings/settings.css`
+    `./assets/css/settings/settings.css`,
+    `./saved-news.html`,
+    `./assets/css/saved/saved.css`
 ];
 
 self.addEventListener('install', function(event) {
