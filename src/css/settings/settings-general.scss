@@ -17,14 +17,16 @@
                 font-size: 20px;
                 .fa-check{
                     color:#0ac42f;
+                    cursor: pointer;
                     &:hover{
                         color:#f00;
                     }
                 }
                 .fa-times{
                     color:#f00;
-                    padding-right:1%;
+                    padding-right:2%;
                     font-size: 22px;
+                    cursor: pointer;
                     &:hover{
                         color:#0ac42f;
                     }
