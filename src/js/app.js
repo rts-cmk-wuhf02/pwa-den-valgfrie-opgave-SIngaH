@@ -19,11 +19,13 @@ if ('serviceWorker' in navigator) {
       // Stash the event so it can be triggered later.
       deferredPrompt = event;
   
-      document.querySelector(".install-offline").classList.toggle("hidden", false);
+      document.querySelector(".install-offline").classList.toggle("hide", false);
+      document.querySelector("footer").style.paddingTop="5%";
     });
   
     document.querySelector(".install-offline").addEventListener('click', () => {
-      document.querySelector(".install-offline").classList.add("hidden");
+      document.querySelector(".install-offline").classList.add("hide");
+      document.querySelector("footer").style.paddingTop="5%";
       // Show the install prompt
       deferredPrompt.prompt();
       deferredPrompt.userChoice
