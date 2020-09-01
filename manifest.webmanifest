@@ -1,0 +1,23 @@
+{
+    "name" : "PWA nyheder",
+    "short_name" : "PWA_nyheder",
+    "start_url" : "/index.html",
+    "background_color" : "#f00",
+    "display" : "standalone",
+    "icons" : [
+        {
+            "src" : "assets/images/news-icon192.png",
+            "type" : "image/png",
+            "sizes" : "192x192",
+            "purpose": "any maskable"
+        },
+        {
+            "src" : "assets/images/news-icon512.png",
+            "type" : "image/png",
+            "sizes" : "512x512",
+            "purpose": "any maskable"
+        }
+    ],
+    "theme_color" : "#f00",
+    "orientation" : "portrait-primary"
+}
