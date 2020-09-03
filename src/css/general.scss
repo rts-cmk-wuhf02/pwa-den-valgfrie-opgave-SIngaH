@@ -21,9 +21,6 @@ body{
         text-align:center;
         text-decoration:underline;
     }
-    p{
-        font-family: 'Anton', sans-serif;
-    }
     .install-offline{
         margin: 4% auto;
         padding: 2% 6%;
@@ -31,8 +28,7 @@ body{
         color: #fff;
         border: solid 2px;
     }
-
-}
-.hide{
-    display:none;
+    .hide{
+        display:none;
+    }
 }
