@@ -61,6 +61,21 @@
                     font-size: 19px;
                     cursor: pointer;
                 }
+                .fa-trash{
+                    &:hover{
+                        color:#f00;
+                    }
+                }
+                .fa-save{
+                    &:hover{
+                        color:#0ac42f;
+                    }
+                }
+                .fa-link{
+                    &:hover{
+                        color:#0000EE;
+                    }
+                }
                 a{
                     color:#000;
                 }
@@ -68,5 +83,3 @@
         }
     }
 }
-// categoru insert
-
