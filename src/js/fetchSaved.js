@@ -107,12 +107,14 @@ function fetcher(url, fetchIt, name, ls){
                 //remove from saved
                 let trashArray = document.querySelectorAll(".fa-trash");
                 for(i = 0; i < trashArray.length; i++){
+                    // console.log(trashArray[i]).parentElement
                     trashArray[i].addEventListener("click", (e) => {
-                        saveNews(e)
+                        deleteNews(e)
+                        e.path[2].style.display="none"
                     });
                 }
                 
-                function saveNews(e){
+                function deleteNews(e){
                     let id = e.srcElement.id;
                     let matches = id.match(/(\d+)/); 
                     let index = matches[0];
@@ -157,7 +159,6 @@ function fetcher(url, fetchIt, name, ls){
                         let aString = array.join(",")
                         localStorage.setItem("worldSaved", aString)
                     }
-                    
                 }
             }
         });
