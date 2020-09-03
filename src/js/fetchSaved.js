@@ -107,7 +107,6 @@ function fetcher(url, fetchIt, name, ls){
                 //remove from saved
                 let trashArray = document.querySelectorAll(".fa-trash");
                 for(i = 0; i < trashArray.length; i++){
-                    // console.log(trashArray[i]).parentElement
                     trashArray[i].addEventListener("click", (e) => {
                         deleteNews(e)
                         e.path[2].style.display="none"
