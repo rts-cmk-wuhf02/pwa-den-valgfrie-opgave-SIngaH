@@ -2,7 +2,7 @@ const cacheName = `static-cache-v8`;
 const filesToCache = [
     `./`,
     `./offline.html`,
-    `./assets/css/all-sites.css`,
+    `./assets/css/all-sites.css`, 
     `./assets/css/index/index.css`,
     `./assets/images/news-icon192.png`,
     `./assets/images/news-icon512.png`,
