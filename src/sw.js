@@ -29,3 +29,14 @@ setCatchHandler(({url, event, params}) =>{
         return Response.error();
     }
 });
+
+self.addEventListener('notificationclick', function (event) {
+    if(event.action === "Settings"){
+        // console.log(event.action)
+        clients.openWindow("/settings.html");
+        myWindow.focus(); 
+    }else{
+        event.notification.close();
+    }
+    setTimeout(function(){ event.notification.close(); }, 5000);
+});
