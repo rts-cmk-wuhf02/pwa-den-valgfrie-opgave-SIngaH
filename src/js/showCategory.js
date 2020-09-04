@@ -10,6 +10,7 @@ let scienceChange = document.querySelector("#category-science .fas");
 let usChange = document.querySelector("#category-us .fas");
 let worldChange = document.querySelector("#category-world .fas");
 
+//which categories are on an which are off
 if(artChecking == "true" || artChecking == null || artChecking == ""){
     artChange.classList.add("fa-check");
     artChange.classList.remove("fa-times");
@@ -17,7 +18,7 @@ if(artChecking == "true" || artChecking == null || artChecking == ""){
     artChange.classList.add("fa-times");
     artChange.classList.remove("fa-check");
 }
-if(homeChecking == "true" || homeChecking == null || artChecking == ""){
+if(homeChecking == "true" || homeChecking == null || homeChecking == ""){
     homeChange.classList.add("fa-check");
     homeChange.classList.remove("fa-times");
 }else{
@@ -58,6 +59,7 @@ for (let c = 0; c < allChecks.length; c++) {
         checkOrEx(e)
     })
 }
+//when an x or an v is clicked it turns into the other makes a localStorage with either true or false
 function checkOrEx(e){
     let currentVorX = e.path[0];
     let TheCategory = e.path[1].id;
