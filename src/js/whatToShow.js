@@ -35,14 +35,10 @@ if(usChecking == "false"){
 }
 if(worldChecking === "false"){
     hideWorld.style.display ="none";
-    setTimeout(() => {
-        border(myArray);
-    }, 2000);
+    border(myArray);
 }else{
     myArray.push(4)
-    setTimeout(() => {
-        border(myArray);
-    }, 2000);
+    border(myArray);
 }
 
 // sætter en border øverst og nederst
