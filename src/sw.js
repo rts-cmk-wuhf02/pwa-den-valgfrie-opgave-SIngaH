@@ -1,65 +1,31 @@
-const cacheName = `static-cache-v8`;
-const filesToCache = [
-    `./`,
-    `./offline.html`,
-    `./assets/css/all-sites.css`, 
-    `./assets/css/index/index.css`,
-    `./assets/images/news-icon192.png`,
-    `./assets/images/news-icon512.png`,
-    `./assets/js/colorChange.js`
-];
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
 
-self.addEventListener('install', function(event) {
-    console.log('Service Worker Installed');
-    event.waitUntil(
-      caches.open(cacheName)
-      .then(function(cache) {
-        console.log('[ServiceWorker] Caching app shell');
-        cache.addAll(filesToCache);
-      }) 
-    );
-});
+const {registerRoute} = workbox.routing;
+const {precacheAndRoute} = workbox.precaching;
+const {StaleWhileRevalidate} = workbox.strategies;
+const {setCatchHandler} = workbox.routing;
 
-self.addEventListener(`activate`, function(event){
-    console.log("activated ", event)
-    event.waitUntil(
-        caches.keys()
-        .then(function(keys){
-            console.log(keys);
-            return Promise.all(keys.filter((key) => key !== cacheName).map((key) => caches.delete(key)))
-        })
-    );
-});
+precacheAndRoute([
+  {url: '/index.html', revision: null },
+  {url: `./offline.html`, revision: null},
+  {url: `./assets/css/index/index.css`, revision: null},
+  {url: `./assets/css/all-sites.css`, revision: null}, 
+  {url: `./assets/images/news-icon192.png`, revision: null},
+  {url: `./assets/images/news-icon512.png`, revision: null},
+  {url: `./assets/css/variables.css`, revision: null},
+  {url: `./assets/js/colorChange.js`, revision: null},
+  {url: `./assets/js/whatToShow.js`, revision: null},
+  {url: `./assets/js/fetch.js`, revision: null},
+  {url: `./assets/js/showCategory.js`, revision: null}
 
-self.addEventListener(`fetch`, function(event){
-    console.log(`fetch `, event);  
-    event.respondWith(   
-        caches.open(cacheName)
-        .then(function(cache){
-            return cache.match(event.request)
-            .then(function(response){
-                return(
-                    response || fetch(event.request)
-                    .then(function(response){
-                        cache.put(event.request, response.clone());
-                        return response;
-                    })
-                );
-            })
-            .catch(function(){
-                return caches.match(`./offline.html`); 
-            });
-        })
-    );
-});
-self.addEventListener('notificationclick', function (event) {
-    // clients.openWindow("/");
-    if(event.action === "Settings"){
-        console.log(event.action)
-        clients.openWindow("/settings.html")
+]);
+
+registerRoute(({ url}) => url.pathname.startsWith("/"), new StaleWhileRevalidate());
+
+setCatchHandler(({url, event, params}) =>{
+    if(event.request.destination === "document"){
+        return caches.match("/offline.html")
     }else{
-        event.notification.close();
+        return Response.error();
     }
 });
-
-//https://developers.google.com/web/ilt/pwa/caching-files-with-service-worker#using_the_cache_api_in_the_service_worker
