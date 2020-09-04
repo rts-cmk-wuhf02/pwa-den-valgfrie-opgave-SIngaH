@@ -43,8 +43,10 @@ if(worldChecking === "false"){
 
 // sætter en border øverst og nederst
 function border (myArray){
-    let lastInArray = myArray.length;
-    let borderTest = document.querySelectorAll(".category");
-    borderTest[myArray[0]].style.borderTop = "solid 2px var(--font-color)";
-    borderTest[lastInArray].style.borderBottom = "solid 2px var(--font-color)"
+    console.log(myArray)
+    let lastInArray = myArray.length - 1;
+    let borderCategories = document.querySelectorAll(".category");
+    borderCategories[myArray[0]].style.borderTop = "solid 2px var(--font-color)";
+    borderCategories[lastInArray].style.borderBottom = "solid 2px var(--font-color)"
+    console.log(lastInArray)
 }
