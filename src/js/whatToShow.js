@@ -46,5 +46,5 @@ function border (myArray){
     let lastInArray = myArray.length - 1;
     let borderCategories = document.querySelectorAll(".category");
     borderCategories[myArray[0]].style.borderTop = "solid 2px var(--font-color)";
-    borderCategories[lastInArray].style.borderBottom = "solid 2px var(--font-color)"
+    borderCategories[lastInArray].style.borderBottom = "solid 2px var(--font-color)";
 }
