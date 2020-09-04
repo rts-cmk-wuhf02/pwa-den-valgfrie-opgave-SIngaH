@@ -4,7 +4,6 @@ for (let i = 0; i < arrows.length; i++) {
     arrows[i].addEventListener("click", ()=>{
         arrows[i].classList.toggle("arrow-down");        
         let fetchDiv = arrows[i].parentElement.parentElement.children[1];
-        console.log(fetchDiv)
         fetchDiv.classList.toggle("hide");
         whichFetch(i);
     })
@@ -35,7 +34,6 @@ function fetcher(url, fetchIt, name){
     fetch(url)
     .then(response => response.json())
     .then(result => {
-        console.log(result)
         result.results.forEach((article, index) => {
             let description;
             if(article.abstract.length > 100){

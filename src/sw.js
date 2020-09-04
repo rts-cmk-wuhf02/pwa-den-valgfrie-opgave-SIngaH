@@ -17,7 +17,6 @@ precacheAndRoute([
   {url: `./assets/js/whatToShow.js`, revision: null},
   {url: `./assets/js/fetch.js`, revision: null},
   {url: `./assets/js/showCategory.js`, revision: null}
-
 ]);
 
 registerRoute(({ url}) => url.pathname.startsWith("/"), new StaleWhileRevalidate());

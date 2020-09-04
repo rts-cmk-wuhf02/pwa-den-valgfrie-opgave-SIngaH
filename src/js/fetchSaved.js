@@ -54,7 +54,6 @@ for (let i = 0; i < arrows.length; i++) {
     arrows[i].addEventListener("click", ()=>{
         arrows[i].classList.toggle("arrow-down");        
         let fetchDiv = arrows[i].parentElement.parentElement.children[1];
-        console.log(fetchDiv)
         fetchDiv.classList.toggle("hide");
         whichFetch(i);
     })
@@ -81,6 +80,7 @@ let scienceInsert = document.querySelector(".insert-saved-science");
 let usInsert = document.querySelector(".insert-saved-us");
 let worldInsert = document.querySelector(".insert-saved-world");
 
+// the fetch
 function fetcher(url, fetchIt, name, ls){
     fetch(url)
     .then(response => response.json())
