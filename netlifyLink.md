@@ -1,0 +1,1 @@
+https://pwa-den-valgfrie-opgave-singah.netlify.app/index.html
