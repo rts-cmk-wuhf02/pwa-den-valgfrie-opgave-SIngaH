@@ -1,3 +1,4 @@
+//after a direct fetch the pc said too many fetches so fetch here is triggered by click
 let arrows = document.querySelectorAll(".fa-arrow-circle-down");
 for (let i = 0; i < arrows.length; i++) {
     arrows[i].addEventListener("click", ()=>{
@@ -9,6 +10,7 @@ for (let i = 0; i < arrows.length; i++) {
     })
 }
 
+//then i call the fetcher function with all the info i will need later
 function whichFetch(i){
     if(i == 0){
         fetcher("https://api.nytimes.com/svc/topstories/v2/arts.json?api-key=qjwHcoRE4GmDuNEDXOXdX0s2ie1TDjAN", artInsert, "art");
@@ -28,6 +30,7 @@ let scienceInsert = document.querySelector(".insert-science");
 let usInsert = document.querySelector(".insert-us");
 let worldInsert = document.querySelector(".insert-world");
 
+//normal fetch function
 function fetcher(url, fetchIt, name){
     fetch(url)
     .then(response => response.json())
@@ -54,6 +57,7 @@ function fetcher(url, fetchIt, name){
                     </div>
                 </div>
             `
+            //save a news story
             let categorySave = document.querySelectorAll(".category-save");
             for (i = 0; i < categorySave.length; i++) {
                 categorySave[i].addEventListener("click", (e, prevString, prevArray)=>{
@@ -121,22 +125,5 @@ function fetcher(url, fetchIt, name){
                 
             }
 
-        });
-    }
-
-
-// function fetchArts(result){
-//     artInsert.innerHTML =`<p>hihihi</p>`
-// }
-// function fetchHome(result){
-//     homeInsert.innerHTML =`<p>hihihi</p>`
-// }
-// function fetchScience(result){
-//     scienceInsert.innerHTML =`<p>hihihi</p>`
-// }
-// function fetchUs(result){
-//     usInsert.innerHTML =`<p>hihihi</p>`
-// }
-// function fetchWorld(result){
-//     worldInsert.innerHTML =`<p>hihihi</p>`
-// }
+    });
+}
