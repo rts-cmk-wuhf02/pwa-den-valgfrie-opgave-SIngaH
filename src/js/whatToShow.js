@@ -10,21 +10,12 @@ let hideScience = document.querySelector(".science");
 let hideUs = document.querySelector(".us");
 let hideWorld = document.querySelector(".world");
 
-console.log(artChecking + " art")
-console.log(homeChecking + " home")
-console.log(scienceChecking + " s")
-console.log(usChecking + " us")
-console.log(worldChecking + " world")
-
-
 //what categories should i show
 if(artChecking == "false"){
     hideArt.style.display ="none";
-    console.log("1")
 }
 if(homeChecking == "false"){
     hideHome.style.display ="none";
-    console.log("2")
 }
 if(scienceChecking == "false"){
     hideScience.style.display ="none";
