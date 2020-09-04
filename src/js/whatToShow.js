@@ -35,15 +35,15 @@ if(usChecking == "false"){
 }
 if(worldChecking === "false"){
     hideWorld.style.display ="none";
-    border(myArray);
+        border(myArray);
 }else{
     myArray.push(4)
-    border(myArray);
+        border(myArray);
 }
 
 // sætter en border øverst og nederst
 function border (myArray){
-    let lastInArray = myArray.length - 1;
+    let lastInArray = myArray.length + 1;
     let borderCategories = document.querySelectorAll(".category");
     borderCategories[myArray[0]].style.borderTop = "solid 2px var(--font-color)";
     borderCategories[lastInArray].style.borderBottom = "solid 2px var(--font-color)";
